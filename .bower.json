@@ -1,0 +1,17 @@
+{
+  "name": "ng-mosaic",
+  "homepage": "https://github.com/sdouara13/ng-mosaic",
+  "_release": "16095810f4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "16095810f4e56a28b422efe83e6c99bf3fffba20"
+  },
+  "dependencies": {
+    "angular": ">=1.2.0"
+  },
+  "_source": "https://github.com/sdouara13/ng-mosaic.git",
+  "_target": "*",
+  "_originalSource": "ng-mosaic",
+  "_direct": true
+}
