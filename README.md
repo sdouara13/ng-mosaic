@@ -10,9 +10,12 @@ Ng-mosaic, an angular plug-in that is used for making mosaic layouts
 # Demo
 
  You can ng-mosaic width ng-infinite-scroll, like:
- '<div infinite-scroll={infinite-function} >
-            <div mosaic mosaic-image-size={mosaicArray} ></div>
- </div>'
+ <div infinite-scroll={infinite-function} >
+            <div mosaic mosaic-image-size={mosaicArray} >
+                <div ng-repeat="{item} in {mosaicArray}">
+                </div>
+            </div>
+ </div>
 
 # Installation
 #### Install with NPM
