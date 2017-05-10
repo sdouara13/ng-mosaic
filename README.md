@@ -2,14 +2,14 @@
 Ng-mosaic, an angular plug-in that is used for making mosaic layouts
 
 ### Quick links
-- [Getting Started](#getting started)
+- [Getting Started](#getting-started)
 - [Optional](#optional)
 - [Demo](#demo)
 - [Installation](#installation)
     - [NPM](#install-with-npm)
     - [Bower](#install-with-bower)
     
-# Getting Started
+# Getting-Started
 
 To get started, add `ng-mosaic.js` to your webpage:
 ```html
