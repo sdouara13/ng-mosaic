@@ -2,10 +2,54 @@
 Ng-mosaic, an angular plug-in that is used for making mosaic layouts
 
 ### Quick links
+- [Getting Started](#getting started)
+- [Optional](#optional)
 - [Demo](#demo)
 - [Installation](#installation)
     - [NPM](#install-with-npm)
     - [Bower](#install-with-bower)
+    
+## Getting Started
+
+To get started, add `taggedInfiniteScroll-min.js` to your webpage:
+```html
+<script type="text/javascript" src="path/to/ng-mosaic.js"></script>
+```
+
+Import ng-mosaic and angular.
+```
+import angular from 'angular';
+import ngMosaic from 'ng-mosaic';
+```
+
+Ensure that your application module specifies ngMosaic as a dependency:
+```
+const MODULE_NAME = 'myApplication';
+angular.module(MODULE_NAME, [ngMosaic]);
+export default MODULE_NAME;
+```
+
+Use the directive by specifying an infinite-scroll attribute on an element.
+```
+<div mosaic mosaic-image-size="$ctrl.myMosaicArray">
+    <div ng-repeat="item in $ctrl.myMosaicArray">
+        <!--infinite mosaic layout-->
+        <div ng-style="{
+         'width': item.width + 'px',
+         'height': item.height + 'px'
+        }">
+        </div>
+    </div>
+</div>
+```
+# Optional
+
+myMosaicArray: type: Array, 
+      members: type: object
+      attributes:
+              width: number,
+              height: number
+    example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
     
 # Demo
 
@@ -13,13 +57,19 @@ Ng-mosaic, an angular plug-in that is used for making mosaic layouts
  
  ```
  <div infinite-scroll={infinite-function} >
-            <div mosaic mosaic-image-size={mosaicArray} >
-                <div ng-repeat="{item} in {mosaicArray}">
+            <div mosaic mosaic-image-size="$ctrl.myMosaicArray" >
+                <div ng-repeat="item in $ctrl.myMosaicArray">
+                    <!--infinite mosaic layout-->
+                    <div ng-style="{
+                     'width': item.width + 'px',
+                     'height': item.height + 'px'
+                    }">
+                    </div>
                 </div>
             </div>
  </div>
  ```
-
+ 
 # Installation
 #### Install with NPM
 
