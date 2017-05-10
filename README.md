@@ -9,7 +9,7 @@ Ng-mosaic, an angular plug-in that is used for making mosaic layouts
     - [NPM](#install-with-npm)
     - [Bower](#install-with-bower)
     
-## Getting Started
+# Getting Started
 
 To get started, add `ng-mosaic.js` to your webpage:
 ```html
@@ -53,7 +53,7 @@ myMosaicArray: type: Array,
     
 # Demo
 
- You can ng-mosaic width ng-infinite-scroll, like:
+ You can use 'mosaic' directive width 'infinite-scroll' directive(npm i infinite-scroll), like:
  
  ```
  <div infinite-scroll="$ctrl.infiniteFunction()" >
