@@ -23,11 +23,11 @@
             return {
                 restrict: 'AC',
                 scope: {
-                    mosaicImageSize: '=',
+                    mosaic: '=',
                 },
                 compile: function (element, attrs) {
                     var mosaicLinker;
-                    var mosaic;
+                    var mosaicEle;
 	                var appendToBody = false;
 	                var i;
 	                var $ele = $(element);
@@ -47,7 +47,7 @@
                         var mosaicScope = scope.$new(true);
                         scopeWatcher = scope.$watch(
                             function () {
-                                return scope.mosaicImageSize;
+                                return scope.mosaic;
                             },
                             function (n, o) {
                                 if(n.length === o.length) {
@@ -68,20 +68,20 @@
                         function createMosaic() {
                             var watcher;
                             var oldResize;
-                            if (mosaic) {
+                            if (mosaicEle) {
                                 removeMosaic();
                             }
                             mosaicLinkedScope = mosaicScope.$new();
-                            mosaicLinkedScope.mosaicImageSize = scope.mosaicImageSize;
+                            mosaicLinkedScope.mosaic = scope.mosaic;
 
-                            mosaic = mosaicLinker(mosaicLinkedScope, function (mosaic) {
+                            mosaicEle = mosaicLinker(mosaicLinkedScope, function (mosaic) {
                                 widthLimit =  $(mosaic).width() || widthLimit;
                                 if(timer) {
                                     $timeout.cancel(timer);
                                 }
                                 timer = $timeout(function () {
 
-                                    startMosaic(mosaicLinkedScope.mosaicImageSize, 'link');
+                                    startMosaic(mosaicLinkedScope.mosaic, 'link');
                                 }, 0);
                                 if (appendToBody) {
                                     $document.find('body').append(mosaic);
@@ -92,9 +92,9 @@
                         }
 
 	                    function removeMosaic() {
-		                    if (mosaic) {
-			                    mosaic.remove();
-			                    mosaic = null;
+		                    if (mosaicEle) {
+			                    mosaicEle.remove();
+			                    mosaicEle = null;
 		                    }
 		                    if (mosaicLinkedScope) {
 			                    mosaicLinkedScope.$destroy();
@@ -113,7 +113,7 @@
                             widthSum = 0;
                             newLine = true;
 		                    if(!angular.isArray(mosaicImageSize)) {
-		                        $log('mosaic data is not an array');
+		                        $log.debug('mosaic data is not an array');
 			                    return;
 		                    }
                             lastIndex = nextIndex;
@@ -142,7 +142,7 @@
 		                    }
 
 	                    }
-	                   
+
                         function judgeLine(index, mosaicImageSize) {
                             var i;
                             var item;

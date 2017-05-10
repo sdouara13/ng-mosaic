@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "angular": "^1.6.4"
-  }
+  },
+  "name": "ng-mosaic",
+  "description": "Ng-mosaic, an angular plug-in that is used for making mosaic layouts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdouara13/ng-mosaic.git"
+  },
+  "author": "sdouara13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdouara13/ng-mosaic/issues"
+  },
+  "homepage": "https://github.com/sdouara13/ng-mosaic#readme"
 }
