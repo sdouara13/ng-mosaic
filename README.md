@@ -44,13 +44,16 @@ Use the directive by specifying mosaic attribute on an element.
 ```
 # Optional
 
+```
 myMosaicArray: type: Array, 
       members: type: object
       attributes:
               width: number,
               height: number
-    example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
-    
+              
+example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
+```
+ 
 # Demo
 
  You can use 'mosaic' directive width 'infinite-scroll' directive(npm i infinite-scroll), like:
