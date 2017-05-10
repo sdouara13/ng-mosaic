@@ -11,7 +11,7 @@ Ng-mosaic, an angular plug-in that is used for making mosaic layouts
     
 ## Getting Started
 
-To get started, add `taggedInfiniteScroll-min.js` to your webpage:
+To get started, add `ng-mosaic.js` to your webpage:
 ```html
 <script type="text/javascript" src="path/to/ng-mosaic.js"></script>
 ```
@@ -29,9 +29,9 @@ angular.module(MODULE_NAME, [ngMosaic]);
 export default MODULE_NAME;
 ```
 
-Use the directive by specifying an infinite-scroll attribute on an element.
+Use the directive by specifying mosaic attribute on an element.
 ```
-<div mosaic mosaic-image-size="$ctrl.myMosaicArray">
+<div mosaic="$ctrl.myMosaicArray">
     <div ng-repeat="item in $ctrl.myMosaicArray">
         <!--infinite mosaic layout-->
         <div ng-style="{
@@ -56,8 +56,8 @@ myMosaicArray: type: Array,
  You can ng-mosaic width ng-infinite-scroll, like:
  
  ```
- <div infinite-scroll={infinite-function} >
-            <div mosaic mosaic-image-size="$ctrl.myMosaicArray" >
+ <div infinite-scroll="$ctrl.infiniteFunction()" >
+            <div mosaic="$ctrl.myMosaicArray" >
                 <div ng-repeat="item in $ctrl.myMosaicArray">
                     <!--infinite mosaic layout-->
                     <div ng-style="{
