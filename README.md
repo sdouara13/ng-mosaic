@@ -33,7 +33,6 @@ Use the directive by specifying mosaic attribute on an element.
 ```
 <div mosaic="$ctrl.myMosaicArray">
     <div ng-repeat="item in $ctrl.myMosaicArray">
-        <!--infinite mosaic layout-->
         <div ng-style="{
          'width': item.width + 'px',
          'height': item.height + 'px'
@@ -47,9 +46,9 @@ Use the directive by specifying mosaic attribute on an element.
 ```
 myMosaicArray: type: Array, 
       members: type: object
-      attributes:
-              width: number,
-              height: number
+               attributes:
+                   width: number,
+                   height: number
               
 example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
 ```
@@ -60,16 +59,16 @@ example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
  
  ```
  <div infinite-scroll="$ctrl.infiniteFunction()" >
-            <div mosaic="$ctrl.myMosaicArray" >
-                <div ng-repeat="item in $ctrl.myMosaicArray">
-                    <!--infinite mosaic layout-->
-                    <div ng-style="{
-                     'width': item.width + 'px',
-                     'height': item.height + 'px'
-                    }">
-                    </div>
-                </div>
+    <div mosaic="$ctrl.myMosaicArray" >
+        <div ng-repeat="item in $ctrl.myMosaicArray">
+            <!--infinite mosaic layout-->
+            <div ng-style="{
+             'width': item.width + 'px',
+             'height': item.height + 'px'
+            }">
             </div>
+        </div>
+    </div>
  </div>
  ```
  
