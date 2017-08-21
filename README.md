@@ -32,7 +32,7 @@ export default MODULE_NAME;
 Use the directive by specifying mosaic attribute on an element.
 ```
 <div mosaic="$ctrl.myMosaicArray">
-    <div ng-repeat="item in $ctrl.myMosaicArray">
+    <div ng-repeat="item in $ctrl.myMosaicArray track by $index">
         <!--infinite mosaic layout-->
         <div ng-style="{
          'width': item.width + 'px',
