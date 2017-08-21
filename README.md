@@ -2,14 +2,14 @@
 Ng-mosaic, an angular plug-in that is used for making mosaic layouts
 
 ### Quick links
-- [Getting Started](#getting started)
+- [Getting Started](#getting-started)
 - [Optional](#optional)
 - [Demo](#demo)
 - [Installation](#installation)
     - [NPM](#install-with-npm)
     - [Bower](#install-with-bower)
     
-## Getting Started
+# Getting-Started
 
 To get started, add `ng-mosaic.js` to your webpage:
 ```html
@@ -44,29 +44,32 @@ Use the directive by specifying mosaic attribute on an element.
 ```
 # Optional
 
+```
 myMosaicArray: type: Array, 
       members: type: object
-      attributes:
-              width: number,
-              height: number
-    example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
-    
+               attributes:
+                   width: number,
+                   height: number
+              
+example: [ ..., {width: 100, height: 100}, {width: 200, height: 200} ]
+```
+ 
 # Demo
 
- You can ng-mosaic width ng-infinite-scroll, like:
+ You can use 'mosaic' directive width 'infinite-scroll' directive(npm i infinite-scroll), like:
  
  ```
  <div infinite-scroll="$ctrl.infiniteFunction()" >
-            <div mosaic="$ctrl.myMosaicArray" >
-                <div ng-repeat="item in $ctrl.myMosaicArray">
-                    <!--infinite mosaic layout-->
-                    <div ng-style="{
-                     'width': item.width + 'px',
-                     'height': item.height + 'px'
-                    }">
-                    </div>
-                </div>
+    <div mosaic="$ctrl.myMosaicArray" >
+        <div ng-repeat="item in $ctrl.myMosaicArray">
+            <!--infinite mosaic layout-->
+            <div ng-style="{
+             'width': item.width + 'px',
+             'height': item.height + 'px'
+            }">
             </div>
+        </div>
+    </div>
  </div>
  ```
  
