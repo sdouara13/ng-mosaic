@@ -4,7 +4,7 @@
   },
   "name": "ng-mosaic",
   "description": "Ng-mosaic, an angular plug-in that is used for making mosaic layouts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "test"
